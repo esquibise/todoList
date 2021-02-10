@@ -14,7 +14,7 @@ class TodosMaster extends StatefulWidget {
 
  class _TodosMasterState extends State<TodosMaster>{
   void _onSelect(Todo selectedTodo){
-    widget.OnTodoSelected(selectedTodo);
+    widget.onTodoSelected(selectedTodo);
   }
 
   @override

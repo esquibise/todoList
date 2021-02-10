@@ -39,13 +39,11 @@ final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
      );
    }
 
-   void _onAddButtonClick() {
-     Navigator.pushNamed(
-       context,
-       OneTodoPage.routeName,
-       arguments: Todo(content: "", title: "", done: false),
-     );
-   }
+
+  void _onAddButtonClick(){
+    TextEditingController newController = TextEditingController();
+    _AllTodosPageState.add(newController);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +58,7 @@ final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
              ? TodoDetails(
               todo: _selectedTodo,
               onRemove: this._onTodoRemoved,
-            )
+                )
             : Container(),
             Expanded(
               child: TodosMaster( //TodosMaster
@@ -70,7 +68,7 @@ final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-    onPressed: () => _onAddButtonClick(),
+    onPressed: () => OnAddButtonClick(),
       ),
     );
   }
