@@ -10,7 +10,7 @@ class DetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Use the Todo to create the UI.
+
     return Scaffold(
       appBar: AppBar(
         title: Text(todo.title),

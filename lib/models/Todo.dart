@@ -2,7 +2,7 @@ class Todo {
 
   String title;
   String content;
-  bool done;
+  bool isDone;
 
-  Todo({this.title, this.content, this.done});
+  Todo({this.title, this.content, this.isDone});
 }

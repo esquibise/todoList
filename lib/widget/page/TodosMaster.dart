@@ -24,9 +24,8 @@ class TodosMaster extends StatefulWidget {
       itemBuilder: (BuildContext context, int index){
         final Todo todo = widget.todos[index];
 
-        return TodoPreview(todo: todo, onTap: _onSelect);
+        return TodoPreview(todo: todo);
       },
     );
   }
-
  }
